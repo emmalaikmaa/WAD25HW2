@@ -1,20 +1,42 @@
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="res/images/favicon.ico">
-    <link rel="stylesheet" href="res/css/style.css">
-    <title>Add Posts</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add Post</title>
+  <link rel="stylesheet" href="res/css/style.css">
 </head>
-
 <body>
-    <header class="post-header">
-        <ul class="nav">
-            <li><a href="index.html">link1</a></li>
-            <li><a href="login.html">link2</a></li>
-        </ul>
-    </header>
-</body>
+<header class="topbar">
+  <div class="topbar-inner">
+    <nav class="nav">
+      <a href="index.html" class="nav-link">Home</a>
+    </nav>
+    <a class="logo" href="#">
+      <img src="res/images/icon.png" width="50" height="50" alt="Icon image">
+    </a>
+  </div>
+</header>
 
+  <main>
+    <div class="center-wrapper">
+      <div class="small-card">
+        <form id="add-post-form" action="index.html" method="get">
+          <div class="form-grid">
+            <label for="content">Post body</label>
+            <textarea id="content" name="content" placeholder="textarea"></textarea>
+
+            <label for="file">Select file</label>
+            <input id="file" name="file" type="file">
+
+            <div class="submit-button">
+              <button type="submit" class="primary-button">Create post</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
