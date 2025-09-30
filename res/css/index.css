@@ -1,0 +1,46 @@
+.post-card{
+  background: #efefef;
+  width: 40vw;
+  border-radius: 8px;
+  padding: 16px;
+  display:inline-block;
+  vertical-align: top;
+  line-height: 1;
+}
+
+.post-card > p{
+    font-size: small    ;
+}
+
+.post-img{
+  width: 100%;
+  height: auto;
+}
+
+.post-details{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+@media (max-width: 420px) {
+  .post-card {
+    width: 94%;
+  }
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 1,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+
+.material-symbols-outlined:hover{
+    color: rgb(55, 96, 157);
+    cursor: pointer;
+}
+
+
+
