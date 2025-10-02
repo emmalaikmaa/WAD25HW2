@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="res/css/login.css">
     <link rel="stylesheet" href="res/css/style.css">
     <title>Login</title>
 </head>
@@ -20,4 +21,29 @@
         </a>
     </div>
     </header>
+
+    <main>        
+    <div class="center-wrapper">
+      <div class="small-card">
+        <form id="Login" action="index.html" method="get">  
+        <h3>Welcome to PostIt</h3> 
+
+        <!--hrefi vaja panna link-->
+        <a href="#" >Create an account</a>
+        <p>or</p>
+        <p>Please log in</p> 
+            
+        <input type="text" placeholder="Email" name="uname" required><br><br>
+        <input type="password" placeholder="Password" name="psw" required>
+
+        <div class="submit-button">
+          <button type="submit" class="primary-button">Log in</button>
+        </div>
+
+        <!--hrefi vaja panna link-->
+        <a href="#" >Forget Password</a>
+        </form>
+      </div>
+    </div>
+  </main>
 </body>
