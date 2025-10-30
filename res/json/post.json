@@ -1,0 +1,69 @@
+[
+    {
+        "Id": 1,
+        "Date": "2025-10-2",
+        "Author": "Paavo Pesusieni",
+        "Body":"What's up friends?",
+        "Image": "res/images/heyyou.jpg"
+    },
+    {
+        "Id": 2,
+        "Date": "2025-12-5",
+        "Author": "Mickey Mouse",
+        "Body":"Just went out with Minnie... hihi",
+        "Image": "res/images/MickeyDate.jpg"
+    },
+    {
+        "Id": 3,
+        "Date": "2025-05-13",
+        "Author": "Homer Simpson",
+        "Body":"I want some doughnuts!!"
+    },
+    {
+        "Id": 4,
+        "Date": "2025-09-20",
+        "Author": "Snoopy",
+        "Body":"#chillingLikeaSnoopy"
+    },
+    {
+        "Id": 5,
+        "Date": "2025-03-28",
+        "Author": "Paavo Pesusieni",
+        "Body":"Who's ready for burgers??",
+        "Image": "res/images/SpongeandBurger.webp"
+    },
+    {
+        "Id": 6,
+        "Date": "2025-07-15",
+        "Author": "Homer Simpson",
+        "Body":"Marge says I should do something productive... so i took this picture instead. #CouchKing",
+        "Image": "res/images/homerandCouch.jpg"
+    },
+    {
+        "Id": 7,
+        "Date": "2025-01-01",
+        "Author":  "Mickey Mouse",
+        "Body":"#HomeSweetHome",
+        "Image": "res/images/DisneyCastle.webp"
+    },
+    {
+        "Id": 8,
+        "Date": "2025-03-19",
+        "Author": "Snoopy",
+        "Body":"I love my best friend! #WoodstockIsTheBest",
+        "Image": "res/images/SnoopyandFriend.jpg"
+    },
+    {
+        "Id": 9,
+        "Date": "2024-12-30",
+        "Author": "Paavo Pesusieni",
+        "Body":"Me when Patrick asks to hang ou with me...",
+        "Image": "res/images/Spongebob.webp"
+    },
+    {
+        "Id": 10,
+        "Date": "2025-08-08",
+        "Author": "Snoopy",
+        "Body":"Dreaming of cookies. Do not disturb! #NapGoals"
+    }
+]
