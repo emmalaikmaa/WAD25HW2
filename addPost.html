@@ -1,23 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Add Post</title>
-  <link rel="stylesheet" href="res/css/style.css">
+  <link rel="stylesheet" href="res/css/style.css" />
+  <script src="src/js/script.js"></script>
 </head>
+
 <body>
-<header class="topbar">
-  <div class="topbar-inner">
-    <nav class="nav">
-      <a href="index.html" class="nav-link">Home</a>
-    </nav>
-    <a class="logo" href="#">
-      <img src="res/images/icon.png" width="50" height="50" alt="Icon image">
-    </a>
-  </div>
-</header>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <nav class="nav">
+        <a href="index.html" class="nav-link">Home</a>
+      </nav>
+
+      <div class="profile">
+        <button id="profileBtn" class="profile-btn" aria-haspopup="true" aria-expanded="false">
+          <img src="res/images/icon.png" width="50" height="50" alt="Icon image" class="profile-photo" />
+        </button>
+        <div id="profileMenu" class="profile-menu" role="menu">
+          <div class="profile-info">
+            <strong id="userName">Guest</strong>
+            <small id="userEmail">guest@example.com</small>
+          </div>
+          <a href="login.html" class="logout" id="logoutLink" role="menuitem">Logout</a>
+        </div>
+      </div>
+    </div>
+  </header>
 
   <main>
     <div class="center-wrapper">
@@ -28,7 +41,7 @@
             <textarea id="content" name="content" placeholder="textarea"></textarea>
 
             <label for="file">Select file</label>
-            <input id="file" name="file" type="file">
+            <input id="file" name="file" type="file" />
 
             <div class="submit-button">
               <button type="submit" class="primary-button">Create post</button>

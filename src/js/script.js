@@ -1,5 +1,9 @@
+// posts section that should only be loaded on index.html
 window.onload = function() {
-    //fetching post information from the endpoint(URI)
+  const postsRoot = document.getElementById('posts-root');
+  if (!postsRoot) return; // not index.html
+
+  //fetching post information from the endpoint(URI)
     //fetch('https://api.jsonsilo.com/public/b23bbb11-8727-4d4a-b11a-09d79b0b6cf7')
     //fetching post information from integrated JSON file
     fetch('res/json/post.json')
@@ -71,7 +75,7 @@ window.onload = function() {
                 div_post.classList.add('post-card')
                 div_header.classList.add('post-details')
                 // add post to center wrapper for correct alignment
-                document.querySelector(".center-wrapper").appendChild(div_post);
+                postsRoot.appendChild(div_post);
             }
             console.log(json);
         })
@@ -81,5 +85,69 @@ window.onload = function() {
             errDiv.innerText = err;
             document.body.appendChild(errDiv);
         })
-                                                                             
 }
+
+// login + dropdown (minimal)
+document.addEventListener('DOMContentLoaded', function () {
+  const nameEl = document.getElementById('userName');
+  const emailEl = document.getElementById('userEmail');
+  const btn = document.getElementById('profileBtn');
+  const menu = document.getElementById('profileMenu');
+  const logout = document.getElementById('logoutLink');
+  const loginForm = document.getElementById('Login');
+
+  try {
+    const saved = localStorage.getItem('user');
+    if (saved) {
+      const u = JSON.parse(saved);
+      if (nameEl && u.name) nameEl.textContent = u.name;
+      if (emailEl && u.email) emailEl.textContent = u.email;
+    }
+  } catch {}
+
+  if (btn && menu) {
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const isOpen = menu.classList.toggle('open');
+      btn.setAttribute('aria-expanded', String(isOpen));
+    });
+    document.addEventListener('click', () => {
+      if (menu.classList.contains('open')) {
+        menu.classList.remove('open');
+        btn.setAttribute('aria-expanded', 'false');
+      }
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        menu.classList.remove('open');
+        btn.setAttribute('aria-expanded', 'false');
+        btn.focus();
+      }
+    });
+  }
+
+  if (logout) {
+    logout.addEventListener('click', () => {
+      localStorage.removeItem('user');
+      if (nameEl) nameEl.textContent = 'Guest';
+      if (emailEl) emailEl.textContent = 'guest@example.com';
+    });
+  }
+
+  if (loginForm) {
+    loginForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const name = (document.getElementById('displayName')?.value || '').trim();
+      const email = (document.getElementById('email')?.value || '').trim();
+      const password = (document.getElementById('password')?.value || '');
+      if (!name || !email || !password) {
+        alert('Please fill in name, gmail, and password.');
+        return;
+      }
+      localStorage.setItem('user', JSON.stringify({ name, email, password }));
+      if (nameEl) nameEl.textContent = name;
+      if (emailEl) emailEl.textContent = email;
+      window.location.href = 'index.html';
+    });
+  }
+});

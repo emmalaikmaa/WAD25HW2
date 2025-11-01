@@ -1,5 +1,6 @@
-* {
-  box-sizing: border-box;
+* { 
+  box-sizing: 
+  border-box; 
 }
 
 body {
@@ -9,8 +10,8 @@ body {
   color: #111;
 }
 
-.topbar {
-  padding: 12px;
+.topbar { 
+  padding: 12px; 
 }
 
 .topbar-inner {
@@ -23,13 +24,13 @@ body {
   align-items: center;
 }
 
-.topbar-inner .logo {
-  margin-left: auto;
+.topbar-inner .logo { 
+  margin-left: auto; 
 }
 
-.nav {
-  display: flex;
-  gap: 12px;
+.nav { 
+  display: flex; 
+  gap: 12px; 
 }
 
 .nav-link {
@@ -39,8 +40,8 @@ body {
   color: inherit;
 }
 
-.nav-link:hover {
-  background-color: #bbb; /* simple hover background */
+.nav-link:hover { 
+  background-color: #bbb; 
 }
 
 .form-grid textarea {
@@ -82,8 +83,8 @@ body {
   align-items: start;
 }
 
-.form-grid label {
-  font-size: 14px;
+.form-grid label { 
+  font-size: 14px; 
 }
 
 .primary-button {
@@ -102,17 +103,77 @@ body {
 
 @media (max-width: 400px) {
   .topbar-inner,
-  .small-card {
-    max-width: 94%;
-    width: auto;
+  .small-card { 
+    max-width: 94%; 
+    width: auto; 
   }
-
-  .form-grid {
-    grid-template-columns: 1fr;
+  .form-grid { 
+    grid-template-columns: 1fr; 
   }
-
-  .form-grid label {
-    margin-bottom: 4px;
+  .form-grid label { 
+    margin-bottom: 4px; 
   }
 }
 
+/* --- dropdown styles --- */
+.profile { 
+  position: relative; 
+  margin-left: auto; 
+}
+
+.profile-btn { 
+  border: 0; 
+  background: transparent; 
+  padding: 0; 
+  cursor: pointer; 
+}
+
+.profile-photo { 
+  border-radius: 50%; 
+  display: block; 
+}
+
+.profile-menu {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 8px);
+  min-width: 220px;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  box-shadow: 0 8px 24px rgba(0,0,0,.12);
+  padding: 10px;
+  display: none;
+  z-index: 1000;
+}
+
+.profile-menu.open { 
+  display: block; 
+}
+
+.profile-info {
+  display: flex; 
+  flex-direction: column; 
+  gap: 2px;
+  padding: 6px 8px 10px;
+}
+
+.profile-info strong { 
+  font-size: 14px; 
+}
+
+.profile-info small { 
+  color: #6b7280; 
+}
+
+.logout {
+  display: block; 
+  padding: 8px 10px;
+  text-decoration: none; 
+  color: #1f2937;
+  border-top: 1px solid #f3f4f6;
+}
+
+.logout:hover { 
+  background: #f9fafb; 
+}

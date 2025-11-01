@@ -2,48 +2,60 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="res/css/login.css">
-    <link rel="stylesheet" href="res/css/style.css">
-    <title>Login</title>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="res/css/login.css" />
+  <link rel="stylesheet" href="res/css/style.css" />
+  <script src="src/js/script.js"></script>
+  <title>Login</title>
 </head>
 
 <body>
-    <header class="topbar">
+  <header class="topbar">
     <div class="topbar-inner">
-        <nav class="nav">
+      <nav class="nav">
         <a href="index.html" class="nav-link">Home</a>
-        </nav>
-        <a class="logo" href="#">
-        <img src="res/images/icon.png" width="50" height="50" alt="Icon image">
-        </a>
-    </div>
-    </header>
+        <a href="addPost.html" class="nav-link">addPost</a>
+      </nav>
 
-    <main>        
+      <div class="profile">
+        <button id="profileBtn" class="profile-btn" aria-haspopup="true" aria-expanded="false">
+          <img src="res/images/icon.png" width="50" height="50" alt="Icon image" class="profile-photo" />
+        </button>
+        <div id="profileMenu" class="profile-menu" role="menu">
+          <div class="profile-info">
+            <strong id="userName">Guest</strong>
+            <small id="userEmail">guest@example.com</small>
+          </div>
+          <a href="login.html" class="logout" id="logoutLink" role="menuitem">Logout</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
     <div class="center-wrapper">
       <div class="small-card">
-        <form id="Login" action="index.html" method="get">  
-        <h3>Welcome to PostIt</h3> 
+        <form id="Login" action="index.html" method="get">
+          <h3>Welcome to PostIt</h3>
 
-        <!--hrefi vaja panna link-->
-        <a href="#" >Create an account</a>
-        <p>or</p>
-        <p>Please log in</p> 
-            
-        <input type="text" placeholder="Email" name="uname" required><br><br>
-        <input type="password" placeholder="Password" name="psw" required>
+          <a href="#">Create an account</a>
+          <p>or</p>
+          <p>Please log in</p>
 
-        <div class="submit-button">
-          <button type="submit" class="primary-button">Log in</button>
-        </div>
+          <input type="text" id="displayName" name="displayName" placeholder="Full name" required /><br /><br />
+          <input type="email" id="email" name="email" placeholder="Gmail" required /><br /><br />
+          <input type="password" id="password" name="psw" placeholder="Password" required />
 
-        <!--hrefi vaja panna link-->
-        <a href="#" >Forget Password</a>
+          <div class="submit-button">
+            <button type="submit" class="primary-button">Log in</button>
+          </div>
+
+          <a href="#">Forget Password</a>
         </form>
       </div>
     </div>
   </main>
 </body>
+</html>
