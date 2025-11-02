@@ -6,7 +6,7 @@ window.onload = function() {
   //fetching post information from the endpoint(URI)
     //fetch('https://api.jsonsilo.com/public/b23bbb11-8727-4d4a-b11a-09d79b0b6cf7')
     //fetching post information from integrated JSON file
-    fetch('res/json/post.json')
+    fetch('res/json/posts.json')
             .then((response) => response.json())
             .then(json => {
             for(const individualjson of json){ 
